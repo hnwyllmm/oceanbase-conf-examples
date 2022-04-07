@@ -6,6 +6,7 @@
 #   port: your ssh port, default 22
 #   timeout: ssh connection timeout (second), default 30
 oceanbase-ce:
+  # obd mirror create时，使用-t指定的tag名字，与这里的tag对应
   tag: oblocal
   servers:
     - name: server1
