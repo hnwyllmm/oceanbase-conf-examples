@@ -1,0 +1,37 @@
+oceanbase-ce:
+  servers:
+    - name: server1
+      ip: 127.0.0.1
+    - name: server2
+      ip: 127.0.0.1
+  server1:
+    mysql_port: 2801
+    rpc_port: 2802
+    home_path: /data/0/wangyunlai.wyl/obd-noproxy-mysqltest1
+    zone: zone1
+  server2:
+    mysql_port: 2811
+    rpc_port: 2812
+    home_path: /data/0/wangyunlai.wyl/obd-noproxy-mysqltest2
+    zone: zone2
+  tag: mysqltest   # 根据之前mirror create的时候打的tag设置
+  global:
+    appname: mysqltest
+    devname: lo # 注意与实际匹配
+    cluster_id: 1
+    memory_limit: 10G
+    major_freeze_duty_time: 'Disable'
+    datafile_size: '10G'
+    system_memory: '5G'
+    cpu_count: '16'
+    stack_size: '512K'
+    cache_wash_threshold: '1G'
+    __min_full_resource_pool_memory: "268435456"
+    workers_per_cpu_quota: '10'
+    schema_history_expire_time: '1d'
+    net_thread_count: '4'
+    minor_freeze_times: '10'
+    enable_separate_sys_clog: 'FALSE'
+    enable_merge_by_turn: 'FALSE'
+    proxyro_password: root
+    _enable_static_typing_engine: True
